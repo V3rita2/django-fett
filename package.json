@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development ./MelodicMercenary/frontEnd/src/index.js --output ./MelodicMercenary/frontEnd/static/frontend/main.js"
+    "dev": "webpack --mode development ./MelodicMercenary/frontEnd/src/index.js --output ./MelodicMercenary/frontEnd/static/frontend/main.js",
+    "build": "webpack --mode development ./MelodicMercenary/frontEnd/src/index.js --output ./MelodicMercenary/frontEnd/static/frontend/main.js"
   },
   "repository": {
     "type": "git",
