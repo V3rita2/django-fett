@@ -1,9 +1,9 @@
 from rest_framework import serializers
-# from .models import PUT MODELS HERE
+from .models import Track
 
-#EXAMPLE OF HOW TO SERIALIZE
-# class ModelSerializer(serializers.ModelSerializer) :
-        # class Meta:
-            # model = Model
-            # fields = ('field1', 'field2',)
+
+class TrackSerializer(serializers.ModelSerializer) :
+    class Meta:
+        model = Track
+        fields = ('title', 'image', 'created_at')
 #REMEMBER TO UPDATE ANY VIEWS USING THIS
