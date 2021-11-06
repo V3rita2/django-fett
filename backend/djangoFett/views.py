@@ -13,3 +13,21 @@ from django.views.generic import DetailView
 
 class Home(TemplateView):
     template_name = "home.html"
+
+# Signup auth view
+
+class Signup(View):
+    def get(self, request):
+        form = UserCreationForm()
+        context = {"form" : form}
+        return render(request, "registration/signup.html", context)
+
+    def post(self, request):
+        form = UserCreationForm()
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect("postList")
+        else:
+            context = {"form" : form}
+            return render(request, "registration/signup.html", context)
