@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development ./MelodicManager/frontend/src/index.js --output-path ./MelodicManager/frontend/static/frontend/",
+    "dev": "webpack --mode development --watch ./MelodicManager/frontend/src/index.js --output-path ./MelodicManager/frontend/static/frontend/",
     "build": "webpack --mode production ./MelodicManager/frontend/src/index.js --output-path ./MelodicManager/frontend/static/frontend/"
   },
   "repository": {
